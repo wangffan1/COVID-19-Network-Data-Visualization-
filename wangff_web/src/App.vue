@@ -1,6 +1,5 @@
 <template>
   <div id="app">
-    <HeadTab />
     <router-view/>
   </div>
 </template>
@@ -14,7 +13,6 @@
       }
     },
     components: {
-      HeadTab,
     }
   }
   
