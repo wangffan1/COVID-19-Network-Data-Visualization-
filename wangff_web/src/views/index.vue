@@ -1,6 +1,5 @@
 <template>
     <div>
-        <router-view/>
         <el-menu :default-active="activeIndex" 
             class="el-menu-demo" 
             mode="horizontal"
@@ -9,11 +8,11 @@
             text-color="#fff"
             active-text-color="#ffd04b"
         >
-            <el-menu-item index="1">疫情分布</el-menu-item>
-            <el-menu-item index="2">各省情况</el-menu-item>
+            <el-menu-item index="1">Epidemic distribution</el-menu-item>
+            <el-menu-item index="2">Provinces</el-menu-item>
             
-            <el-menu-item index="3">疫苗管理</el-menu-item>
-            <el-menu-item index="4">各国政策</el-menu-item>
+            <el-menu-item index="3">Vaccine Administration</el-menu-item>
+            <el-menu-item index="4">National policies</el-menu-item>
         </el-menu>
         <div class="line"></div>
     </div>
@@ -36,5 +35,5 @@ export default {
 </script>
 
 <style>
-
+    
 </style>
