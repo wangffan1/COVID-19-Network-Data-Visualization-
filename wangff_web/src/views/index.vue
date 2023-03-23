@@ -1,6 +1,7 @@
 <template>
     <div>
-        <el-menu :default-active="activeIndex" 
+        <el-menu 
+            :default-active="this.$route.name" 
             class="el-menu-demo" 
             mode="horizontal"
             @select="handleSelect"
@@ -8,13 +9,22 @@
             text-color="#fff"
             active-text-color="#ffd04b"
         >
-            <el-menu-item index="1">Epidemic distribution</el-menu-item>
-            <el-menu-item index="2">Provinces</el-menu-item>
+            <el-menu-item index="Epidemic_distribution">
+                <span class = "introduce">Epidemic distribution</span>
+            </el-menu-item>
+            <el-menu-item index="Provinces">
+                <span class = "introduce">Provinces</span>
+            </el-menu-item>
             
-            <el-menu-item index="3">Vaccine Administration</el-menu-item>
-            <el-menu-item index="4">National policies</el-menu-item>
+            <el-menu-item index="Vaccine_administration">
+                <span class = "introduce">Vaccine administration</span>
+            </el-menu-item>
+            <el-menu-item index="National_policies">
+                <span class = "introduce">National policies</span>
+            </el-menu-item>
         </el-menu>
         <div class="line"></div>
+        <router-view/>
     </div>
 </template>
 <script>
@@ -22,13 +32,18 @@ export default {
     name: "layout",
     data() {
         return {
-            activeIndex: '1',
+            activePage: "Epidemic distribution",
         };
+    },
+    created() {
+        const { name } = this.$route;
+        this.activePage = name;
     },
     components: {},
     methods: {
-        handleSelect(key, keyPath) {
-            console.log(key, keyPath);
+        handleSelect(index, Path) {
+            console.log(index, Path);
+            this.$router.push({name: index})
         }
     }
 }

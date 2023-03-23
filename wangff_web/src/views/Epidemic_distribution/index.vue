@@ -1,10 +1,19 @@
 <template>
     <div id = "epic_distribution">
-        <div style="color: red;">wff</div>
+        
     </div>
-    
 </template>
 <script>
+    export default {
+        data() {
+            return {
+                epidemic: "",
+            }
+        },
+        methods: {
+
+        }
+    }
 </script>
 <style>
 </style>
