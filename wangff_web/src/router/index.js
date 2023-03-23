@@ -12,34 +12,34 @@ const routes = [
         component: Layout,
         children: [{
             path: '/',
-            name: '/Epidemic_distribution',
+            name: 'Epidemic_distribution',
             redirect: '/Epidemic_distribution',
             component: () => 
                 import('../views/main.vue'),       
             children: [
                 {
-                path: '/',
-                name: '/Epidemic_distribution',
+                path: '/Epidemic_distribution',
+                name: 'Epidemic_distribution',
                 component: () => 
-                    import('../views/Epidemic_distribution/index.vue')
+                    import ('../views/Epidemic_distribution/index.vue')
                 },
                 {
-                path: '/',
-                name: '/Provinces',
+                path: '/Provinces',
+                name: 'Provinces',
                 component: () => 
-                    import('../views/Provinces/index.vue')
+                    import ('../views/Provinces/index.vue')
                 },
                 {
-                path: '/',
-                name: '/Vaccine_administration',
+                path: '/Vaccine_administration',
+                name: 'Vaccine_administration',
                 component: () => 
-                    import('../views/Vaccine_administration/index.vue')
+                    import ('../views/Vaccine_administration/index.vue')
                 },
                 {
-                path: '/',
-                name: '/National_policies',
+                path: '/National_policies',
+                name: 'National_policies',
                 component: () => 
-                    import('../views/National_policies/index.vue')
+                    import ('../views/National_policies/index.vue')
                 }
             ] 
         }]
